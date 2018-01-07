@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="GFXEditor|Win32">
+      <Configuration>GFXEditor</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="SFXEdit|Win32">
+      <Configuration>SFXEdit</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{27A9A21E-76E3-4310-8706-11EB272B9209}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>one</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\;$(DXSDK_DIR)\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SFML\lib\;$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\;$(DXSDK_DIR)\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SFML\lib\;$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\;$(DXSDK_DIR)\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SFML\lib\;$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\;$(DXSDK_DIR)\Include\;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\SFML\lib\;$(DXSDK_DIR)\Lib\x86\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;opengl32.lib;winmm.lib;$(ProjectDir)\SFML\lib\Debug\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;opengl32.lib;winmm.lib;$(ProjectDir)\SFML\lib\Debug\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>ws2_32.lib;opengl32.lib;winmm.lib;$(ProjectDir)\SFML\lib\Debug\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>SFML_STATIC;_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>ws2_32.lib;opengl32.lib;winmm.lib;$(ProjectDir)\SFML\lib\Release\*.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Windows Kits\8.0\Lib\win8\um\x86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Core\Audio.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\Globals.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\Graphics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\GSM.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\Input.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\InputMapper.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Core\Window.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Editors\GFXEdit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Editors\SFXEdit.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Loaders\AudioLoader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Loaders\GraphicsLoader.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQAudio.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQGlobals.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQGraphics.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQInput.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQSaveFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqapi.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqbaselib.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqclass.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqcompiler.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqdebug.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqfuncstate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqlexer.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqmem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqobject.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstate.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdaux.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdblob.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdio.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdmath.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdrex.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdstream.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdstring.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdsystem.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqtable.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqvm.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Core\Audio.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\BinaryFile.h" />
+    <ClInclude Include="Core\Globals.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\Graphics.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\GSM.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\Input.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\InputMapper.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Core\Window.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Loaders\Loaders.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="SQConnect\SQForwardDeclares.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqarray.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqclass.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqclosure.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqcompiler.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqconfig.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqfuncproto.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqfuncstate.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqlexer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqobject.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqopcodes.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqpcheader.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstate.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdaux.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdblob.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdblobimpl.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdio.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdmath.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdstream.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdstring.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdsystem.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstring.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqtable.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squirrel.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squserdata.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squtils.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqvm.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='GFXEditor|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='SFXEdit|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

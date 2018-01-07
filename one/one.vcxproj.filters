@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{08d7f6c7-4655-470a-8a10-6f437d3573d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Editors">
+      <UniqueIdentifier>{5d7bdffb-ecc4-4bf5-bbc0-d54526ee63cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Squrrel">
+      <UniqueIdentifier>{964d1034-897e-4b9d-a996-eea2e787bf6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SquirrelConnect">
+      <UniqueIdentifier>{3e508db6-2636-4171-9191-44407d7802b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Loaders">
+      <UniqueIdentifier>{6cb3000e-f9bc-4bf3-9226-cd0109ffab5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqapi.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqbaselib.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqclass.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqcompiler.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqdebug.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqfuncstate.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqlexer.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqmem.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqobject.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstate.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdaux.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdblob.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdio.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdmath.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdrex.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdstream.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdstring.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqstdsystem.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqtable.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Squirrel\sqvm.cpp">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Audio.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Globals.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Graphics.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\GSM.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Input.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\InputMapper.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\Window.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Editors\GFXEdit.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="Loaders\GraphicsLoader.cpp">
+      <Filter>Source Files\Loaders</Filter>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQGraphics.cpp">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQInput.cpp">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="Editors\SFXEdit.cpp">
+      <Filter>Source Files\Editors</Filter>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQGlobals.cpp">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQSaveFile.cpp">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="SQConnect\SQAudio.cpp">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClCompile>
+    <ClCompile Include="Loaders\AudioLoader.cpp">
+      <Filter>Source Files\Loaders</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Squirrel\sqvm.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqarray.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqclass.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqclosure.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqcompiler.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqconfig.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqfuncproto.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqfuncstate.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqlexer.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqobject.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqopcodes.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqpcheader.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstate.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdaux.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdblob.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdblobimpl.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdio.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdmath.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdstream.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdstring.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstdsystem.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqstring.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\sqtable.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squirrel.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squserdata.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Squirrel\squtils.h">
+      <Filter>Source Files\Squrrel</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Audio.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Globals.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Graphics.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GSM.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Input.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\InputMapper.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\Window.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Loaders\Loaders.h">
+      <Filter>Source Files\Loaders</Filter>
+    </ClInclude>
+    <ClInclude Include="SQConnect\SQForwardDeclares.h">
+      <Filter>Source Files\SquirrelConnect</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\BinaryFile.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
